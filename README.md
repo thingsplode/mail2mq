@@ -1,6 +1,9 @@
+### Install environment 
+
+```bash
 pip install awscli --upgrade
 pip install --user --upgrade aws-sam-cli
-pip install stomp.py
+```
 
 ### Create and activate a virtual environment
 
@@ -17,6 +20,8 @@ zip -r9 ../../../../mailfunc.zip . \
 popd
 zip -g mailfunc.zip receiver.py
 ```
+Don't forget to rerun the first two commands whenever you install
+a new dependency.
 
 ### Create the function
 
@@ -34,7 +39,7 @@ aws lambda invoke --function-name mail2mq --payload "$(cat rcvd_email.json)" out
 ```
 You can check the execution output by issuing the following command:
 ```bash
-cat ouput.txt |jq .
+cat output.txt |jq .
 ```
 
 ### Update the function after code change
