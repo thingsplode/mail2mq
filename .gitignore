@@ -9,6 +9,8 @@ __pycache__/
 *.so
 *.zip
 *.txt
+.idea/
+.idea
 # Distribution / packaging
 .Python
 build/
